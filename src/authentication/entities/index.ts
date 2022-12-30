@@ -1,2 +1,4 @@
-export * from './iUserCredentials.interface'
-export * from './userCredentials.entity'
+import IUserCredential from "./iUserCredentials.interface";
+import UserCredential from "./userCredentials.entity";
+
+export { IUserCredential, UserCredential }
