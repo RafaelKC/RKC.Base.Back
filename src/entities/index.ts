@@ -1,2 +1,3 @@
-export * from './entities/entities.entity';
-export * from './entities/iEntities.interface';
+import { IBaseEntity, BaseEntity } from './entities'; 
+
+export { BaseEntity, IBaseEntity }

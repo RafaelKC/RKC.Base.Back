@@ -1,7 +1,7 @@
 import { PrimaryGeneratedColumn } from "typeorm";
 import IBaseEntity from "./iEntities.interface";
 
-export abstract class BaseEntity implements IBaseEntity {
+export default abstract class BaseEntity implements IBaseEntity {
 
     @PrimaryGeneratedColumn('uuid')
     id: string;

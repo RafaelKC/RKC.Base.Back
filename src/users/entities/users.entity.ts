@@ -1,9 +1,9 @@
 import { Entity, Column } from "typeorm";
 import { BaseEntity } from "../../entities";
-import IUsers from "./iUsers.interface";
+import IUser from "./iUsers.interface";
 
 @Entity('users')
-export default class User extends BaseEntity implements IUsers {
+export default class User extends BaseEntity implements IUser {
     
     @Column({ name: 'first_name', nullable: false })
     firstName: string;

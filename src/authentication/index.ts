@@ -1,1 +1,3 @@
-export * from './entities'
+import { IUserCredential, UserCredential } from "./entities";
+
+export { IUserCredential, UserCredential}
