@@ -17,7 +17,7 @@ export default class User extends BaseEntity implements IUser {
     @Column({ nullable: false })
     email: string;
 
-    @Column({ name: 'is_active', nullable: false })
+    @Column({ name: 'is_active', nullable: false, default: true })
     isActive: boolean;
 
     get fullName(): string {
