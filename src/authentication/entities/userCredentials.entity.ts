@@ -2,7 +2,7 @@ import { Entity, Column } from "typeorm";
 import { BaseEntity } from "../../entities";
 import IUserCredential from "./iUserCredentials.interface";
 
-@Entity('users_credemtials')
+@Entity('users_credentials')
 export default class UserCredential extends BaseEntity implements IUserCredential {
 
     @Column({ name: 'user_id', nullable: false, type: 'uuid' })
