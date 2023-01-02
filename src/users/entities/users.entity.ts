@@ -20,13 +20,13 @@ export default class User extends BaseEntity implements IUser {
     @Column({ name: 'is_active', nullable: false, default: true })
     isActive: boolean;
 
-    constructor(user: IUser) {
+    constructor(user?: Partial<IUser>) {
         super()
-        this.firstName = user.firstName
-        this.lastName = user.lastName
-        this.username = user.username
-        this.email = user.email
-        this.isActive = user.isActive
+        this.firstName = user?.firstName
+        this.lastName = user?.lastName
+        this.username = user?.username
+        this.email = user?.email
+        this.isActive = user?.isActive
     }
     
     get fullName(): string {

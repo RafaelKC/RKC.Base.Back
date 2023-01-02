@@ -11,4 +11,10 @@ export default class UserCredential extends BaseEntity implements IUserCredentia
     @Column({ name: 'encrypted_password', nullable: false,})
     encryptedPassword: string;
 
+    constructor(userCredential?: Partial<IUserCredential>) {
+        super()
+        this.encryptedPassword = userCredential?.encryptedPassword;
+        this.userId = userCredential?.userId;
+    }
+
 }
