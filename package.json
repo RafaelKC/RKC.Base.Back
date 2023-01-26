@@ -1,6 +1,6 @@
 {
   "name": "rkc.base.back",
-  "version": "1.2.0",
+  "version": "1.2.5",
   "files": [
     "dist",
     "package.json"
