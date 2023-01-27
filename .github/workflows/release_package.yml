@@ -56,14 +56,11 @@ jobs:
 
       # Update changelog unreleased section with new version
       - name: Update changelog
-      #  uses: superfaceai/release-changelog-action@v1
-        run: |
-          pwd
-          ls
-       # with:
-       #   path-to-changelog: ./CHANGELOG.md
-       #   version: ${{ env.NEW_VERSION }}
-       #   operation: release
+        uses: superfaceai/release-changelog-action@v1
+        with:
+          path-to-changelog: ./.github/workflows/CHANGELOG.md
+          version: ${{ env.NEW_VERSION }}
+          operation: release
 
       # Commit changes
       - name: Commit CHANGELOG.md and package.json changes and create tag
@@ -91,7 +88,7 @@ jobs:
         name: Get version changelog
         uses: superfaceai/release-changelog-action@v1
         with:
-          path-to-changelog: ./CHANGELOG.md
+          path-to-changelog: ./.github/workflows/CHANGELOG.md
           version: ${{ env.NEW_VERSION }}
           operation: read
 
