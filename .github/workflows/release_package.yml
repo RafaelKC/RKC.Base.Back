@@ -58,8 +58,8 @@ jobs:
       - name: Update changelog
       #  uses: superfaceai/release-changelog-action@v1
         run: |
-          echo "pwd"
-          echo "ls"
+          pwd
+          ls
        # with:
        #   path-to-changelog: ./CHANGELOG.md
        #   version: ${{ env.NEW_VERSION }}
